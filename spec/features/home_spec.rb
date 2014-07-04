@@ -1,8 +1,8 @@
 require_relative '../spec_helper'
 
-describe 'Home', :type => :feature do
-  it 'responds with successful status' do
+feature 'User successfully visits home page' do
+  scenario 'via the / URL' do
     visit '/'
-    page.status_code.should == 200
+    expect(page).to have_content 'Home'
   end
 end
